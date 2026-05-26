@@ -1,609 +1,98 @@
-你们这个方向，其实已经非常接近现在业界开始成型的一个范式：
-
-> “Supervisor / Orchestrator Agent + Human-owned Worker Agents + Workflow Runtime”
-
-重点已经不是“每个Agent多聪明”，而是：
-
-* 任务如何拆解
-* 状态如何流转
-* 谁负责权限
-* 谁负责升级（escalation）
-* 谁负责审计
-* 谁负责恢复失败
-* 人和Agent如何协同
-
-而你们关注的“中台 Agent”本质上其实是：
-
-> 一个 Agentic Workflow Operating System（Agent编排操作系统）
-
-这也是现在真正进入生产环境的团队最重视的部分。很多人已经发现：
-
-* “单个超强 Agent”很难稳定
-* 真正上线后，问题不在 prompt，而在 orchestration（编排）
-* 企业更像是在做：
-
-  * BPM + Event Bus + Workflow Engine + AI Decision Layer
-
-而不是“聊天机器人”。
+这是一个很有价值的架构方向，业界已经形成了一些比较成熟的参考模式。下面从中台Agent的视角，系统梳理一下。
 
 ---
 
-# 一、业界已经开始收敛的核心架构
+## 核心架构模式：Supervisor Pattern（主管Agent模式）
 
-目前最成熟、最接近你们描述的，是：
+这是你描述的场景最直接对应的业界范式。核心思想是：中台Agent作为唯一的"指挥官"，负责分解任务、分配专项Agent、监控进度、汇总结果——相当于一个AI项目经理。用户/系统只和中台Agent交互，各员工Agent之间不直接通信，只向中台汇报。
 
-## 1. Supervisor-Worker（主管-员工）架构
-
-这是目前企业里最主流的模式。([Md Bazlur Rahman Likhon][1])
-
-结构：
-
-```text
-                    ┌─────────────────┐
-                    │  Supervisor AI  │
-                    │ (中台Agent)      │
-                    └────────┬────────┘
-                             │
-         ┌───────────────────┼───────────────────┐
-         │                   │                   │
-         ▼                   ▼                   ▼
-
-   员工Agent A          员工Agent B         员工Agent C
-   (销售)               (客服)              (财务)
-
-         │                   │                   │
-         ▼                   ▼                   ▼
-
-      Human A             Human B             Human C
-```
-
-这个 Supervisor Agent：
-
-* 监控系统事件
-* 识别异常
-* 任务分解
-* 指派负责人
-* 跟踪 SLA
-* 收集结果
-* 做 escalation
-* 做 cross-agent coordination
-
-其实已经像：
-
-# “AI Team Lead / AI Dispatcher”
+这个模式与静态流水线的核心区别有三点：**动态路由**（根据部分结果实时重新分配任务）、**输出验证**（中台在推进前校验每个子任务结果）、**防止死循环**（通过层级限制防止Agent相互循环委托）。
 
 ---
 
-# 二、真正成熟系统里，中台 Agent 不应该做什么
+## 中台Agent的完整运行架构
 
-这是一个关键点。
+### 第一层：感知与任务生成
 
-很多 demo 里：
+在运营场景中，典型的模式是：监控Agent持续分析数据流，发现异常后，协调Agent负责交叉比对来源（如部署记录、业务日志），然后由优化/执行Agent提出可行方案，其中可逆的低风险动作自主执行，高风险操作则升级到人工审批。
 
-> Supervisor 自己“思考一切”
+中台Agent发现任务后，需要**结构化地描述任务**再下发，通常包含：
+- 任务类型与优先级
+- 需要的上下文/数据
+- 期望输出格式
+- 截止时间/SLA要求
+- 升级条件（什么情况必须人工介入）
 
-但生产里大家越来越发现：
+### 第二层：任务下发与Agent路由
 
-这会导致：
+在实现层面，编排系统通常包含四个组件：**Agent注册表**（记录各Agent能力）、**路由器**（将任务映射到最合适的Agent序列）、**状态存储**（共享上下文和历史记录）、**监管器**（监控超时、重试和升级）。
 
-* 不稳定
-* 无法审计
-* 不可预测
-* 难 debug
-* 权限风险
+路由逻辑的关键：**Agent Card（能力声明）机制**。
 
-所以成熟系统开始收敛成：
+每个合规Agent在标准URL发布一个JSON格式的Agent Card，描述其能力、支持的交互方式、认证要求。中台Agent在发起任务前查询这些Card，从而实现无硬编码的动态工作流组合。
 
-# 中台 Agent ≠ 大脑
+### 第三层：Agent间通信协议
 
-# 中台 Agent = Workflow Runtime + Policy Engine
+业界目前有两个最重要的开放标准：
 
-也就是说：
+**A2A协议（Agent-to-Agent，2025年4月Google发布）**
+A2A是一个开放规范，定义了来自不同厂商和框架的AI Agent如何互相发现、委托任务、协调工作。双方都不需要暴露内部逻辑、内存或实现细节。它基于HTTP、SSE和JSON-RPC 2.0构建，已由Linux基金会治理，拥有150+组织支持者，包括Salesforce、SAP、ServiceNow、Workday等。
 
-真正核心的不是 LLM。
+任务的状态机非常关键：Agent提交任务并获得任务ID追踪，订阅状态更新而非轮询，支持跨越数小时甚至数天的异步长流程。 标准状态包括：`submitted → working → input-required → completed / failed / cancelled`。
 
-而是：
+**MCP协议（Model Context Protocol，Anthropic发布）**
+A2A和MCP是互补的标准：MCP负责Agent与工具/数据的连接（Agent-to-Tool），A2A负责Agent与Agent的连接（Agent-to-Agent）。
 
-```text
-Workflow Engine
-+ State Machine
-+ Event Bus
-+ Policy Layer
-+ Human Escalation
-+ Audit Log
-+ Agent Registry
-```
+### 第四层：Human-in-the-Loop（人工介入）
 
-LLM 只是其中一个 decision component。
+这是你描述的"升级到员工手工处理"的关键设计。业界的最佳实践是**可调节的自主权分级**：
 
----
+通过置信阈值、风险评分、业务规则和异常检测来决定何时升级到人工。高风险领域设置更严格的升级标准，低风险领域则相对宽松，并根据实际错误率、审核负荷和事件模式持续调整。**过度升级会杀死效率，升级不足会带来风险**，目标是找到一个可持续的升级率。
 
-# 三、你们这个系统最合理的整体架构
+组织需要一个感知身份的编排层，能够**暂停Agent执行、将审批请求路由到授权人员、执行有时间限制的决策窗口，并记录每次干预以供审计**。
 
-这是我比较推荐、也最接近未来 enterprise agentic system 的结构：
-
----
-
-# Layer 1：Event & Signal Layer（事件层）
-
-负责：
-
-* 数据分析
-* KPI监控
-* 异常检测
-* 风险识别
-* SLA超时
-* 客诉
-* 财务异常
-* CRM变更
-
-来源：
-
-```text
-ERP
-CRM
-Data Warehouse
-Logs
-Email
-Slack
-Ticket
-IoT
-BI
-```
-
-这一层不一定是 Agent。
-
-更多是：
-
-* CEP（complex event processing）
-* rules engine
-* ML anomaly detection
-
-然后生成：
-
-```json
-{
-  "task_type": "customer_retention",
-  "priority": "high",
-  "customer_id": "...",
-  "risk_score": 0.92
-}
-```
+触发人工介入的常见条件：
+- 决策不可逆（资金变动、数据删除、合同签署）
+- 置信度低于阈值
+- 超出Agent授权范围
+- 任务超时未完成
+- 员工Agent主动标记"需要确认"
 
 ---
 
-# Layer 2：Orchestrator / Supervisor Agent（核心）
+## 层级化的组织结构
 
-这是你们最关注的部分。
-
-它应该包括：
+对于较复杂的场景，IBM等机构的研究表明，层级分解是大规模企业Agent系统的标准做法：特定业务域（客服、销售运营、IT自动化）各有一个专属Supervisor管理，这些Supervisor再向顶层战略协调器汇报。在实践中，大多数生产系统使用混合模式——层级系统内部的子团队可用Mesh协调，流水线的某个阶段可启动并行Swarm进行数据采集，这些模式是可以组合使用的。
 
 ---
 
-## A. Task Planner（任务规划）
+## 中台Agent的核心能力需求
 
-职责：
+生产级的编排系统必须优雅地处理失败：Agent返回异常结果、工具调用超时、工作流进入未定义状态。企业级平台包含内置的故障转移（重新路由到备用Agent）、异常处理，以及当系统置信度低于阈值或需要人工判断时自动升级到人工的机制。
 
-* 识别需要哪些角色
-* 是否需要并行
-* 是否需要审批
-* 是否需要人类
-
-例如：
-
-```text
-客户流失风险 →
-    销售Agent联系 →
-    财务Agent评估折扣 →
-    法务Agent检查合同 →
-    最终人工确认
-```
-
-这里更像 BPMN。
-
-不是自由思考。
+| 能力模块 | 说明 |
+|---|---|
+| **任务分解器** | 将监测到的异常/需求拆解为可执行子任务 |
+| **Agent Registry** | 维护各员工Agent的能力声明（Agent Card） |
+| **动态路由器** | 根据任务类型+Agent当前状态做最优分配 |
+| **状态追踪器** | 跨Agent追踪任务全生命周期 |
+| **升级决策器** | 基于规则/置信度决定是否转人工 |
+| **结果聚合器** | 汇总各Agent返回，形成整体结论 |
+| **审计日志** | 完整记录每次决策和交互，满足合规要求 |
 
 ---
 
-## B. Workflow State Machine（状态机）
+## 框架选型参考
 
-这是最重要的。
-
-任务必须是：
-
-```text
-CREATED
-→ ASSIGNED
-→ IN_PROGRESS
-→ WAITING_HUMAN
-→ APPROVED
-→ FAILED
-→ COMPLETED
-```
-
-而不是：
-
-> “Agent说自己完成了”
-
-真正生产系统必须：
-
-* 可恢复
-* 可追踪
-* 可 replay
-* 可暂停
-* 可审计
-
-这也是为什么很多生产团队最后会：
-
-* LangGraph + Temporal
-* 或 BPM Engine + AI
-
-而不是纯 CrewAI。([Presenc AI][2])
+目前主流框架：LangGraph（有状态图，支持循环推理）、CrewAI（角色制团队+内置委托）、OpenAI Agents SDK（2025年3月发布，基于handoff的生产级工具包）、Microsoft Agent Framework（2025年10月发布，AutoGen+Semantic Kernel合并）、Google ADK（深度集成Google Cloud的多Agent模式）。
 
 ---
 
-## C. Agent Registry（Agent注册中心）
+## 实践建议
 
-中台不能假设所有员工 Agent 一样。
+选型原则：从最简单的模式开始，大多数企业实现在Supervisor或Adaptive Network模式下能取得最优结果，只有在工作流需要完全编程控制时才使用自定义模式。保持结构化日志、上下文保留和跨所有模式的透明推理链。
 
-所以需要：
-
-```json
-{
-  "employee_id": "u123",
-  "agent_endpoint": "...",
-  "capabilities": [
-      "email",
-      "crm_update",
-      "quote_generation"
-  ],
-  "approval_required": true
-}
-```
-
-中台只关心：
-
-* 能力
-* SLA
-* 权限
-* endpoint
-
-不关心内部实现。
-
-这很像：
-
-# Kubernetes Scheduler
-
-而不是“聊天”。
-
----
-
-## D. Policy Engine（策略层）
-
-这是企业真正会非常在意的。
-
-例如：
-
-```text
-超过5000美元折扣
-→ 必须人工批准
-
-涉及PII
-→ 禁止发给外部Agent
-
-客户等级VIP
-→ 必须2小时内响应
-```
-
-生产里通常：
-
-* OPA（Open Policy Agent）
-* RBAC
-* ABAC
-* approval workflow
-
-会成为核心。
-
-最近论文里甚至开始把：
-
-“Constraint-aware orchestration”
-作为核心研究方向。([arXiv][3])
-
----
-
-## E. Human Escalation（人工升级）
-
-这是你们方案里非常对的部分。
-
-真正成熟系统都开始意识到：
-
-# Human-in-the-loop 不是 fallback
-
-# 而是 primary design
-
-所以：
-
-```text
-Agent自主完成80%
-关键节点人工确认
-```
-
-才是企业现实。
-
-例如：
-
-```text
-Agent生成报价
-→ 人确认
-→ Agent发客户
-```
-
-而不是：
-
-```text
-Agent自己乱发
-```
-
----
-
-# 四、中台和员工 Agent 如何通信
-
-这里业界开始出现两个方向。
-
----
-
-# 方案 A：Task Queue / Workflow 模式（最现实）
-
-也是我最推荐的。
-
-中台不直接“聊天”。
-
-而是：
-
-# 发任务
-
-例如：
-
-```json
-{
-  "task_id": "T-1001",
-  "assigned_to": "sales_agent_12",
-  "objective": "联系客户挽留",
-  "constraints": {
-      "discount_limit": "10%"
-  },
-  "required_outputs": [
-      "call_summary",
-      "next_action"
-  ]
-}
-```
-
-员工 Agent：
-
-* 拉取任务
-* 执行
-* 更新状态
-* 请求审批
-* 提交结果
-
-这其实已经非常接近：
-
-* Jira
-* ServiceNow
-* Airflow
-* Temporal
-* BPMN
-
-只是 executor 变成了 Agent。
-
----
-
-# 方案 B：Agent-to-Agent Protocol（未来方向）
-
-Google A2A / MCP 等开始探索：
-
-Agent 间标准协议。
-
-例如：
-
-```text
-discover capability
-negotiate task
-handoff context
-request approval
-return artifact
-```
-
-但目前还比较早期。
-
-生产里真正稳定的仍然是：
-
-# “Workflow + API + Queue”
-
-不是自由 Agent 对话。([TechRadar][4])
-
----
-
-# 五、你们应该特别注意的一个现实
-
-业界最近一个很大的反思：
-
-> “multi-agent 很酷，但生产里大量系统最后退回了 2~3 agent”
-
-Reddit 和生产经验里大量人提到：([Reddit][5])
-
-真正稳定的是：
-
-```text
-Planner
-→ Executor
-→ Reviewer
-```
-
-而不是：
-
-```text
-100个Agent自由协作
-```
-
-原因：
-
-* 难 debug
-* token 爆炸
-* 状态失控
-* loop
-* 权限混乱
-* 难 audit
-
-所以：
-
-# 企业最终会越来越 workflow 化
-
-# 而不是 swarm 化
-
-这点非常重要。
-
----
-
-# 六、我认为你们应该采用的“企业级 Agent Teamwork 架构”
-
-这是我比较推荐的最终形态：
-
-```text
-                    ┌────────────────────┐
-                    │ Event Detection     │
-                    │ BI / Monitoring     │
-                    └─────────┬──────────┘
-                              │
-                              ▼
-
-               ┌─────────────────────────┐
-               │ Supervisor / Orchestrator│
-               │                         │
-               │ - task planning         │
-               │ - policy engine         │
-               │ - workflow runtime      │
-               │ - SLA tracking          │
-               │ - escalation            │
-               └─────────┬──────────────┘
-                         │
-
-         ┌───────────────┼────────────────┐
-         ▼               ▼                ▼
-
-    Sales Agent     Support Agent     Finance Agent
-
-         │               │                │
-
-         ▼               ▼                ▼
-
-      Human           Human            Human
-```
-
-关键：
-
-# Agent 是“执行者”
-
-# 中台是“操作系统”
-
----
-
-# 七、如果我是你们，我会优先做的能力
-
-按优先级：
-
----
-
-## 第一阶段（最重要）
-
-### 1. Workflow State Machine
-
-这是核心中的核心。
-
----
-
-### 2. Human Escalation
-
-真正决定企业能不能上线。
-
----
-
-### 3. Audit & Replay
-
-企业极度重要。
-
----
-
-### 4. Agent Registry
-
-实现 heterogeneous agent。
-
----
-
-## 第二阶段
-
-### 5. Policy Engine
-
-权限、审批、合规。
-
----
-
-### 6. Memory & Experience Layer
-
-让系统学习：
-
-* 哪种任务容易失败
-* 哪个Agent更擅长
-* 哪类升级最常见
-
-TechRadar 那篇把这个叫：
-
-“experience era”。([TechRadar][4])
-
----
-
-## 第三阶段
-
-### 7. Agent-to-Agent Protocol
-
-最后再考虑。
-
-别一开始做“智能对话网络”。
-
----
-
-# 八、技术选型上，业界正在形成的组合
-
-现在生产里比较常见：
-
-| 层                | 常见技术                         |
-| ---------------- | ---------------------------- |
-| Workflow Runtime | Temporal / Cadence / Airflow |
-| Agent Graph      | LangGraph                    |
-| Agent Team       | CrewAI / AutoGen             |
-| Human Approval   | BPMN / Camunda               |
-| Queue            | Kafka / SQS                  |
-| Policy           | OPA                          |
-| Observability    | LangSmith / OpenTelemetry    |
-| Memory           | Postgres + Vector DB         |
-| Tool Access      | MCP                          |
-
-其中：
-
-# Temporal + LangGraph
-
-正在变成很强的 enterprise 组合。
-
-因为：
-
-* Temporal负责 durable execution
-* LangGraph负责 agent graph/state
-
-这是非常符合你们需求的方向。([Presenc AI][2])
-
-[1]: https://brlikhon.engineer/blog/multi-agent-orchestration-langgraph-vs-crewai-vs-autogen-for-enterprise-workflows?utm_source=chatgpt.com "Multi-Agent Orchestration: LangGraph vs. CrewAI vs. AutoGen for Enterprise Workflows | Likhon's Gen AI Blog"
-[2]: https://presenc.ai/research/multi-agent-orchestration-frameworks-2026?utm_source=chatgpt.com "Multi-Agent Orchestration Frameworks 2026 (LangGraph, CrewAI, AutoGen, Swarm) | Presenc AI"
-[3]: https://arxiv.org/abs/2604.17240?utm_source=chatgpt.com "Safe and Policy-Compliant Multi-Agent Orchestration for Enterprise AI"
-[4]: https://www.techradar.com/pro/5-things-you-need-to-know-about-agent-to-agent-ai-collaboration?utm_source=chatgpt.com "5 things you need to know about agent-to-agent AI collaboration"
-[5]: https://www.reddit.com/r/aiagents/comments/1t5m33j/when_do_you_actually_use_multiagent_vs/?utm_source=chatgpt.com "When do you actually use multi-agent vs single-agent in production?"
+你们关注的中台Agent，本质上是一个**决策密集型**角色，最需要优先设计清楚的是：
+1. **任务Schema**：下发给员工Agent的任务格式是否足够结构化，让对方能确定性地解析和执行
+2. **升级策略**：什么条件触发、升级给谁、人工回应后如何无缝接回自动化
+3. **可观测性**：中台Agent的每个路由决策都要可追溯，这是出问题时的命脉
