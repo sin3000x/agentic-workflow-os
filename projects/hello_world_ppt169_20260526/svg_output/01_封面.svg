@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- Background image -->
+  <image href="images/hello_world_hero.png" x="0" y="0" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/>
+  <!-- Scrim overlay for text legibility -->
+  <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" fill-opacity="0.35"/>
+  <!-- Central content group -->
+  <g id="title">
+    <text x="640" y="320" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="72" font-weight="bold" fill="#1F2937" text-anchor="middle">Hello, World!</text>
+    <text x="640" y="380" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="30" fill="#6B7280" text-anchor="middle">一切伟大的旅程从这里开始</text>
+  </g>
+  <!-- Year badge -->
+  <g id="badge">
+    <text x="640" y="440" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="18" fill="#2563EB" text-anchor="middle">2026</text>
+  </g>
+</svg>

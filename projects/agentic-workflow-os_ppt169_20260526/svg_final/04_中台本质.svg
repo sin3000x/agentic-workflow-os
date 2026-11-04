@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  
+  <text x="60" y="55" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="28" font-weight="700" fill="#1D1D1F">中台 Agent ≠ 大脑，= 操作系统</text>
+  
+  <path fill="#FF6F00" fill-opacity="0.06" d="M66,72 H1214 A6,6 0 0 1 1220,78 V106 A6,6 0 0 1 1214,112 H66 A6,6 0 0 1 60,106 V78 A6,6 0 0 1 66,72 Z" />
+  <text x="80" y="98" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#FF6F00" font-weight="600">核心洞察：真正核心的不是 LLM，LLM 只是其中一个 decision component</text>
+  
+  <g id="not-section">
+    <path fill="#F5F7FA" d="M70,135 H410 A10,10 0 0 1 420,145 V405 A10,10 0 0 1 410,415 H70 A10,10 0 0 1 60,405 V145 A10,10 0 0 1 70,135 Z" />
+    <path fill="#C62828" fill-opacity="0.08" d="M70,135 H410 A10,10 0 0 1 420,145 V169 A10,10 0 0 1 410,179 H70 A10,10 0 0 1 60,169 V145 A10,10 0 0 1 70,135 Z" />
+    <rect x="60" y="169" width="360" height="1" fill="#C62828" fill-opacity="0.15" />
+    
+  <g transform="translate(80.0, 145.0)" fill="none" stroke="#C62828" stroke-width="2">
+    <path d="M12 9v4" />
+    <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+    <path d="M12 16h.01" />
+  </g>
+    <text x="112" y="164" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="700" fill="#C62828">中台 Agent 不应该做什么</text>
+    <text x="80" y="205" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1D1D1F">Supervisor 自己"思考一切"会导致：</text>
+    <text x="95" y="240" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 不稳定、不可预测</text>
+    <text x="95" y="268" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 无法审计、难 debug</text>
+    <text x="95" y="296" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 权限风险</text>
+    <text x="95" y="324" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· Token 爆炸、状态失控</text>
+    <text x="95" y="360" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 难以恢复失败</text>
+    <text x="95" y="395" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#9CA3AF">生产里大量系统最后退回了 2-3 agent</text>
+  </g>
+  
+  <g id="is-section">
+    <path fill="#F5F7FA" d="M460,135 H1210 A10,10 0 0 1 1220,145 V405 A10,10 0 0 1 1210,415 H460 A10,10 0 0 1 450,405 V145 A10,10 0 0 1 460,135 Z" />
+    <path fill="#2E7D32" fill-opacity="0.06" d="M460,135 H1210 A10,10 0 0 1 1220,145 V169 A10,10 0 0 1 1210,179 H460 A10,10 0 0 1 450,169 V145 A10,10 0 0 1 460,135 Z" />
+    <rect x="450" y="169" width="770" height="1" fill="#2E7D32" fill-opacity="0.15" />
+    
+  <g transform="translate(470.0, 145.0)" fill="none" stroke="#2E7D32" stroke-width="2">
+    <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
+  </g>
+    <text x="502" y="164" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="700" fill="#2E7D32">中台 Agent = Workflow Runtime + Policy Engine</text>
+    
+    
+  <g transform="translate(475.0, 195.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8" />
+    <path d="M14 19l2 2l4 -4" />
+    <path d="M9 8h4" />
+    <path d="M9 12h2" />
+  </g>
+    <text x="505" y="212" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Workflow Engine</text>
+    <text x="505" y="232" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">任务编排与状态流转</text>
+    
+  <g transform="translate(475.0, 250.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M8 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />
+    <path d="M4 10a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" />
+  </g>
+    <text x="505" y="267" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">State Machine</text>
+    <text x="505" y="287" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">可恢复/可追踪/可审计</text>
+    
+  <g transform="translate(475.0, 305.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+  </g>
+    <text x="505" y="322" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Event Bus</text>
+    <text x="505" y="342" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">异步事件驱动</text>
+    
+  <g transform="translate(475.0, 360.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" />
+    <path d="M15 19l2 2l4 -4" />
+  </g>
+    <text x="505" y="377" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Policy Layer</text>
+    <text x="505" y="397" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">权限/审批/合规</text>
+    
+    
+  <g transform="translate(750.0, 195.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M3 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M17 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M6.5 17.5l5.5 -4.5l5.5 4.5" />
+    <path d="M12 7l0 6" />
+  </g>
+    <text x="780" y="212" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Human Escalation</text>
+    <text x="780" y="232" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">关键节点人工确认</text>
+    
+  <g transform="translate(750.0, 250.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8" />
+    <path d="M14 19l2 2l4 -4" />
+    <path d="M9 8h4" />
+    <path d="M9 12h2" />
+  </g>
+    <text x="780" y="267" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Audit Log</text>
+    <text x="780" y="287" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">全链路可追溯</text>
+    
+  <g transform="translate(750.0, 305.0) scale(0.9166666666666666)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3" />
+    <path d="M3 15a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -2" />
+    <path d="M7 8l0 .01" />
+    <path d="M7 16l0 .01" />
+  </g>
+    <text x="780" y="322" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Agent Registry</text>
+    <text x="780" y="342" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">异构Agent注册中心</text>
+    
+  <g transform="translate(750.0, 360.0) scale(0.9166666666666666)" fill="none" stroke="#FF6F00" stroke-width="2">
+    <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
+    <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
+    <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
+    <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
+    <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" />
+    <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
+  </g>
+    <text x="780" y="377" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#FF6F00">LLM（仅决策组件）</text>
+    <text x="780" y="397" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">不是核心，是辅助</text>
+  </g>
+  
+  <path fill="#1565C0" fill-opacity="0.04" d="M68,440 H1212 A8,8 0 0 1 1220,448 V492 A8,8 0 0 1 1212,500 H68 A8,8 0 0 1 60,492 V448 A8,8 0 0 1 68,440 Z" />
+  <text x="640" y="475" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" font-weight="600" fill="#1565C0">企业更像是在做：BPM + Event Bus + Workflow Engine + AI Decision Layer</text>
+  <text x="640" y="495" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">而不是"聊天机器人" — 真正上线后，问题不在 prompt，而在 orchestration</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">04</text>
+</svg>

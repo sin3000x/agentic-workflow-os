@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  
+  <text x="640" y="52" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="30" fill="#1D1D1F" text-anchor="middle" font-weight="bold">企业级 Agent Teamwork 三层架构</text>
+  
+  <path fill="#1565C0" d="M164,90 H216 A4,4 0 0 1 220,94 V256 A4,4 0 0 1 216,260 H164 A4,4 0 0 1 160,256 V94 A4,4 0 0 1 164,90 Z" />
+  <text x="190" y="165" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">01</text>
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1.5" d="M238,90 H1112 A8,8 0 0 1 1120,98 V252 A8,8 0 0 1 1112,260 H238 A8,8 0 0 1 230,252 V98 A8,8 0 0 1 238,90 Z" />
+  <text x="260" y="125" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="20" fill="#1565C0" font-weight="bold">Event &amp; Signal Layer — 事件与信号层</text>
+  <text x="260" y="158" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1D1D1F">核心能力：数据分析 / KPI 监控 / 异常检测 / 风险识别</text>
+  <text x="260" y="190" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#6B7280">数据源：ERP / CRM / BI / Logs</text>
+  
+  <path fill="#1565C0" fill-opacity="0.1" stroke="#1565C0" stroke-width="1" d="M284,210 H356 A4,4 0 0 1 360,214 V238 A4,4 0 0 1 356,242 H284 A4,4 0 0 1 280,238 V214 A4,4 0 0 1 284,210 Z" />
+  <text x="320" y="231" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle">ERP</text>
+  <path fill="#1565C0" fill-opacity="0.1" stroke="#1565C0" stroke-width="1" d="M384,210 H456 A4,4 0 0 1 460,214 V238 A4,4 0 0 1 456,242 H384 A4,4 0 0 1 380,238 V214 A4,4 0 0 1 384,210 Z" />
+  <text x="420" y="231" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle">CRM</text>
+  <path fill="#1565C0" fill-opacity="0.1" stroke="#1565C0" stroke-width="1" d="M484,210 H556 A4,4 0 0 1 560,214 V238 A4,4 0 0 1 556,242 H484 A4,4 0 0 1 480,238 V214 A4,4 0 0 1 484,210 Z" />
+  <text x="520" y="231" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle">BI</text>
+  <path fill="#1565C0" fill-opacity="0.1" stroke="#1565C0" stroke-width="1" d="M584,210 H656 A4,4 0 0 1 660,214 V238 A4,4 0 0 1 656,242 H584 A4,4 0 0 1 580,238 V214 A4,4 0 0 1 584,210 Z" />
+  <text x="620" y="231" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle">Logs</text>
+  
+  <polygon points="640,270 630,270 640,290 650,270" fill="#FF6F00" />
+  <rect x="637" y="260" width="6" height="12" fill="#FF6F00" />
+  
+  <path fill="#FF6F00" d="M164,300 H216 A4,4 0 0 1 220,304 V466 A4,4 0 0 1 216,470 H164 A4,4 0 0 1 160,466 V304 A4,4 0 0 1 164,300 Z" />
+  <text x="190" y="375" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">02</text>
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1.5" d="M238,300 H1112 A8,8 0 0 1 1120,308 V462 A8,8 0 0 1 1112,470 H238 A8,8 0 0 1 230,462 V308 A8,8 0 0 1 238,300 Z" />
+  <text x="260" y="335" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="20" fill="#FF6F00" font-weight="bold">Orchestrator / Supervisor — 编排与监督层</text>
+  <text x="260" y="368" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1D1D1F">任务规划 / 策略引擎 / 工作流运行时 / SLA 跟踪 / 升级机制</text>
+  <path fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1" d="M284,390 H396 A4,4 0 0 1 400,394 V418 A4,4 0 0 1 396,422 H284 A4,4 0 0 1 280,418 V394 A4,4 0 0 1 284,390 Z" />
+  <text x="340" y="411" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle">Task Planner</text>
+  <path fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1" d="M424,390 H536 A4,4 0 0 1 540,394 V418 A4,4 0 0 1 536,422 H424 A4,4 0 0 1 420,418 V394 A4,4 0 0 1 424,390 Z" />
+  <text x="480" y="411" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle">Policy Engine</text>
+  <path fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1" d="M564,390 H696 A4,4 0 0 1 700,394 V418 A4,4 0 0 1 696,422 H564 A4,4 0 0 1 560,418 V394 A4,4 0 0 1 564,390 Z" />
+  <text x="630" y="411" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle">Workflow Runtime</text>
+  <path fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1" d="M724,390 H836 A4,4 0 0 1 840,394 V418 A4,4 0 0 1 836,422 H724 A4,4 0 0 1 720,418 V394 A4,4 0 0 1 724,390 Z" />
+  <text x="780" y="411" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle">SLA Tracker</text>
+  <path fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1" d="M864,390 H976 A4,4 0 0 1 980,394 V418 A4,4 0 0 1 976,422 H864 A4,4 0 0 1 860,418 V394 A4,4 0 0 1 864,390 Z" />
+  <text x="920" y="411" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle">Escalation</text>
+  
+  <polygon points="640,480 630,480 640,500 650,480" fill="#2E7D32" />
+  <rect x="637" y="470" width="6" height="12" fill="#2E7D32" />
+  
+  <path fill="#2E7D32" d="M164,510 H216 A4,4 0 0 1 220,514 V676 A4,4 0 0 1 216,680 H164 A4,4 0 0 1 160,676 V514 A4,4 0 0 1 164,510 Z" />
+  <text x="190" y="585" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">03</text>
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1.5" d="M238,510 H1112 A8,8 0 0 1 1120,518 V672 A8,8 0 0 1 1112,680 H238 A8,8 0 0 1 230,672 V518 A8,8 0 0 1 238,510 Z" />
+  <text x="260" y="545" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="20" fill="#2E7D32" font-weight="bold">Worker Agents + Humans — 执行层</text>
+  <text x="260" y="578" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1D1D1F">专业 Agent 执行具体任务，关键节点由人类审批确认</text>
+  
+  <path fill="#2E7D32" fill-opacity="0.12" stroke="#2E7D32" stroke-width="1" d="M286,600 H404 A6,6 0 0 1 410,606 V634 A6,6 0 0 1 404,640 H286 A6,6 0 0 1 280,634 V606 A6,6 0 0 1 286,600 Z" />
+  <text x="345" y="625" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#2E7D32" text-anchor="middle">Sales Agent</text>
+  <path fill="#2E7D32" fill-opacity="0.12" stroke="#2E7D32" stroke-width="1" d="M436,600 H564 A6,6 0 0 1 570,606 V634 A6,6 0 0 1 564,640 H436 A6,6 0 0 1 430,634 V606 A6,6 0 0 1 436,600 Z" />
+  <text x="500" y="625" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#2E7D32" text-anchor="middle">Support Agent</text>
+  <path fill="#2E7D32" fill-opacity="0.12" stroke="#2E7D32" stroke-width="1" d="M596,600 H724 A6,6 0 0 1 730,606 V634 A6,6 0 0 1 724,640 H596 A6,6 0 0 1 590,634 V606 A6,6 0 0 1 596,600 Z" />
+  <text x="660" y="625" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#2E7D32" text-anchor="middle">Finance Agent</text>
+  <text x="760" y="625" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#6B7280">→</text>
+  <path fill="#1565C0" fill-opacity="0.12" stroke="#1565C0" stroke-width="1" d="M796,600 H904 A6,6 0 0 1 910,606 V634 A6,6 0 0 1 904,640 H796 A6,6 0 0 1 790,634 V606 A6,6 0 0 1 796,600 Z" />
+  <text x="850" y="625" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle">Human 审批</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">05</text>
+</svg>

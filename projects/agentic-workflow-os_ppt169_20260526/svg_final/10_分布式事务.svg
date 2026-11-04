@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  
+  <text x="640" y="52" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="28" fill="#1D1D1F" text-anchor="middle" font-weight="bold">多 Agent 协作如何保证"要么全做，要么全不做"</text>
+  
+  
+  <path fill="#1565C0" fill-opacity="0.06" d="M66,72 H1214 A6,6 0 0 1 1220,78 V102 A6,6 0 0 1 1214,108 H66 A6,6 0 0 1 60,102 V78 A6,6 0 0 1 66,72 Z" />
+  <text x="80" y="96" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0">Saga 模式：把跨系统操作拆成可回滚的步骤链，任何一步失败都能自动撤销前面的操作</text>
+  
+  
+  <text x="80" y="140" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1565C0" font-weight="bold">供应链场景：紧急补货审批</text>
+  
+  
+  <path fill="#F5F7FA" stroke="#1565C0" stroke-width="1.5" d="M88,160 H432 A8,8 0 0 1 440,168 V342 A8,8 0 0 1 432,350 H88 A8,8 0 0 1 80,342 V168 A8,8 0 0 1 88,160 Z" />
+  <path fill="#1565C0" d="M88,160 H432 A8,8 0 0 1 440,168 V188 A8,8 0 0 1 432,196 H88 A8,8 0 0 1 80,188 V168 A8,8 0 0 1 88,160 Z" />
+  <rect x="80" y="184" width="360" height="12" fill="#1565C0" />
+  <text x="100" y="184" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#FFFFFF" font-weight="bold">第一步：先做，但留好后路</text>
+  <text x="100" y="222" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1D1D1F">订单 Agent → 锁定供应商配额</text>
+  <text x="100" y="248" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1D1D1F">物流 Agent → 预约运力</text>
+  <text x="100" y="278" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">每步都记录"怎么撤回"：</text>
+  <text x="100" y="300" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#1565C0">释放配额 / 取消运力预约</text>
+  <text x="100" y="335" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#9CA3AF">（可补偿交易）</text>
+  
+  <line x1="440" y1="255" x2="470" y2="255" stroke="#FF6F00" stroke-width="2" />
+  <polygon points="470,251 478,255 470,259" fill="#FF6F00" />
+  
+  <path fill="#F5F7FA" stroke="#FF6F00" stroke-width="1.5" d="M488,160 H772 A8,8 0 0 1 780,168 V342 A8,8 0 0 1 772,350 H488 A8,8 0 0 1 480,342 V168 A8,8 0 0 1 488,160 Z" />
+  <path fill="#FF6F00" d="M488,160 H772 A8,8 0 0 1 780,168 V188 A8,8 0 0 1 772,196 H488 A8,8 0 0 1 480,188 V168 A8,8 0 0 1 488,160 Z" />
+  <rect x="480" y="184" width="300" height="12" fill="#FF6F00" />
+  <text x="500" y="184" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#FFFFFF" font-weight="bold">第二步：人工拍板（不归路）</text>
+  <text x="500" y="222" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1D1D1F">计划经理审批补货方案</text>
+  <text x="500" y="252" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">批准 → 进入第三步</text>
+  <text x="500" y="278" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#C62828">拒绝 → 自动撤回第一步</text>
+  <path fill="#C62828" fill-opacity="0.08" d="M504,295 H756 A4,4 0 0 1 760,299 V313 A4,4 0 0 1 756,317 H504 A4,4 0 0 1 500,313 V299 A4,4 0 0 1 504,295 Z" />
+  <text x="630" y="311" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#C62828" text-anchor="middle">人工确认 = 分水岭，过了就不能回头</text>
+  <text x="500" y="340" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#9CA3AF">（枢轴交易）</text>
+  
+  <line x1="780" y1="255" x2="810" y2="255" stroke="#2E7D32" stroke-width="2" />
+  <polygon points="810,251 818,255 810,259" fill="#2E7D32" />
+  
+  <path fill="#F5F7FA" stroke="#2E7D32" stroke-width="1.5" d="M828,160 H1192 A8,8 0 0 1 1200,168 V342 A8,8 0 0 1 1192,350 H828 A8,8 0 0 1 820,342 V168 A8,8 0 0 1 828,160 Z" />
+  <path fill="#2E7D32" d="M828,160 H1192 A8,8 0 0 1 1200,168 V188 A8,8 0 0 1 1192,196 H828 A8,8 0 0 1 820,188 V168 A8,8 0 0 1 828,160 Z" />
+  <rect x="820" y="184" width="380" height="12" fill="#2E7D32" />
+  <text x="840" y="184" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#FFFFFF" font-weight="bold">第三步：必须完成，失败就重试</text>
+  <text x="840" y="222" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1D1D1F">订单 Agent → 正式下采购单</text>
+  <text x="840" y="248" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1D1D1F">物流 Agent → 确认发货排期</text>
+  <text x="840" y="278" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">网络抖动？自动重试</text>
+  <text x="840" y="300" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">重复执行也不会重复下单</text>
+  <text x="840" y="335" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#9CA3AF">（可重试交易 — 幂等设计）</text>
+  
+  
+  <line x1="80" y1="380" x2="1200" y2="380" stroke="#E5E7EB" stroke-width="1" />
+  
+  <text x="80" y="415" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#C62828" font-weight="bold">如果计划经理拒绝了？</text>
+  
+  
+  <path fill="#1565C0" fill-opacity="0.08" stroke="#1565C0" stroke-width="1.5" d="M88,435 H252 A8,8 0 0 1 260,443 V482 A8,8 0 0 1 252,490 H88 A8,8 0 0 1 80,482 V443 A8,8 0 0 1 88,435 Z" />
+  <text x="170" y="460" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#1565C0" text-anchor="middle" font-weight="bold">订单 Agent</text>
+  <text x="170" y="478" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">锁定配额 ✓</text>
+  <line x1="260" y1="462" x2="300" y2="462" stroke="#6B7280" stroke-width="1.5" />
+  <polygon points="300,458 308,462 300,466" fill="#6B7280" />
+  <path fill="#1565C0" fill-opacity="0.08" stroke="#1565C0" stroke-width="1.5" d="M318,435 H482 A8,8 0 0 1 490,443 V482 A8,8 0 0 1 482,490 H318 A8,8 0 0 1 310,482 V443 A8,8 0 0 1 318,435 Z" />
+  <text x="400" y="460" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#1565C0" text-anchor="middle" font-weight="bold">物流 Agent</text>
+  <text x="400" y="478" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">预约运力 ✓</text>
+  <line x1="490" y1="462" x2="530" y2="462" stroke="#6B7280" stroke-width="1.5" />
+  <polygon points="530,458 538,462 530,466" fill="#6B7280" />
+  <path fill="#FF6F00" fill-opacity="0.08" stroke="#FF6F00" stroke-width="1.5" d="M548,435 H732 A8,8 0 0 1 740,443 V482 A8,8 0 0 1 732,490 H548 A8,8 0 0 1 540,482 V443 A8,8 0 0 1 548,435 Z" />
+  <text x="640" y="460" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle" font-weight="bold">计划经理审批</text>
+  <text x="640" y="478" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#C62828" text-anchor="middle">拒绝 ✗</text>
+  
+  
+  <line x1="540" y1="495" x2="540" y2="530" stroke="#C62828" stroke-width="1.5" stroke-dasharray="4,3" />
+  <line x1="540" y1="530" x2="80" y2="530" stroke="#C62828" stroke-width="1.5" stroke-dasharray="4,3" />
+  <polygon points="85,526 80,530 85,534" fill="#C62828" />
+  <text x="310" y="555" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#C62828" text-anchor="middle">自动补偿：释放供应商配额 + 取消运力预约</text>
+  
+  
+  <path fill="#1565C0" fill-opacity="0.05" stroke="#1565C0" stroke-width="1" d="M208,590 H1072 A8,8 0 0 1 1080,598 V632 A8,8 0 0 1 1072,640 H208 A8,8 0 0 1 200,632 V598 A8,8 0 0 1 208,590 Z" />
+  <text x="640" y="620" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1565C0" text-anchor="middle">Saga 模式让多个 Agent 跨系统协作时，数据永远不会处于"做了一半"的状态</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">10</text>
+</svg>

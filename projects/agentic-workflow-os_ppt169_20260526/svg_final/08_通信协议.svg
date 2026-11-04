@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  
+  <text x="640" y="52" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="30" fill="#1D1D1F" text-anchor="middle" font-weight="bold">异构 Agent 交互协议</text>
+  
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M68,90 H422 A8,8 0 0 1 430,98 V542 A8,8 0 0 1 422,550 H68 A8,8 0 0 1 60,542 V98 A8,8 0 0 1 68,90 Z" />
+  <path fill="#1565C0" d="M68,90 H422 A8,8 0 0 1 430,98 V126 A8,8 0 0 1 422,134 H68 A8,8 0 0 1 60,126 V98 A8,8 0 0 1 68,90 Z" />
+  <rect x="60" y="114" width="370" height="20" fill="#1565C0" />
+  <text x="245" y="118" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">A2A (水平层)</text>
+  <text x="80" y="165" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">定位</text>
+  <text x="80" y="192" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">跨平台 Agent 互联互通</text>
+  <text x="80" y="230" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">核心技术</text>
+  <text x="80" y="258" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• JSON-RPC 2.0</text>
+  <text x="80" y="284" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• Agent Cards (能力描述)</text>
+  <text x="80" y="310" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• SSE (Server-Sent Events)</text>
+  <text x="80" y="350" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">适用场景</text>
+  <text x="80" y="378" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 不同厂商 Agent 协作</text>
+  <text x="80" y="404" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 跨组织边界通信</text>
+  <text x="80" y="430" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 动态能力发现</text>
+  <path fill="#1565C0" fill-opacity="0.08" d="M84,460 H406 A4,4 0 0 1 410,464 V486 A4,4 0 0 1 406,490 H84 A4,4 0 0 1 80,486 V464 A4,4 0 0 1 84,460 Z" />
+  <text x="245" y="480" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#1565C0" text-anchor="middle">代表：Google A2A Protocol</text>
+  
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M463,90 H817 A8,8 0 0 1 825,98 V542 A8,8 0 0 1 817,550 H463 A8,8 0 0 1 455,542 V98 A8,8 0 0 1 463,90 Z" />
+  <path fill="#FF6F00" d="M463,90 H817 A8,8 0 0 1 825,98 V126 A8,8 0 0 1 817,134 H463 A8,8 0 0 1 455,126 V98 A8,8 0 0 1 463,90 Z" />
+  <rect x="455" y="114" width="370" height="20" fill="#FF6F00" />
+  <text x="640" y="118" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">MCP (垂直层)</text>
+  <text x="475" y="165" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">定位</text>
+  <text x="475" y="192" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">Agent 与本地工具/数据源打通</text>
+  <text x="475" y="230" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">核心技术</text>
+  <text x="475" y="258" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• Tool/Resource/Prompt 抽象</text>
+  <text x="475" y="284" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• Stdio / HTTP Transport</text>
+  <text x="475" y="310" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• Schema-driven 接口</text>
+  <text x="475" y="350" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">适用场景</text>
+  <text x="475" y="378" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• Agent 调用数据库/API</text>
+  <text x="475" y="404" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 本地文件系统访问</text>
+  <text x="475" y="430" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 第三方 SaaS 集成</text>
+  <path fill="#FF6F00" fill-opacity="0.08" d="M479,460 H801 A4,4 0 0 1 805,464 V486 A4,4 0 0 1 801,490 H479 A4,4 0 0 1 475,486 V464 A4,4 0 0 1 479,460 Z" />
+  <text x="640" y="480" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle">代表：Anthropic MCP</text>
+  
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M858,90 H1212 A8,8 0 0 1 1220,98 V542 A8,8 0 0 1 1212,550 H858 A8,8 0 0 1 850,542 V98 A8,8 0 0 1 858,90 Z" />
+  <path fill="#2E7D32" d="M858,90 H1212 A8,8 0 0 1 1220,98 V126 A8,8 0 0 1 1212,134 H858 A8,8 0 0 1 850,126 V98 A8,8 0 0 1 858,90 Z" />
+  <rect x="850" y="114" width="370" height="20" fill="#2E7D32" />
+  <text x="1035" y="118" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Queue / API (传统层)</text>
+  <text x="870" y="165" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">定位</text>
+  <text x="870" y="192" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">成熟可靠的异步通信基础设施</text>
+  <text x="870" y="230" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">核心技术</text>
+  <text x="870" y="258" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• Kafka / SQS / RabbitMQ</text>
+  <text x="870" y="284" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• REST / gRPC API</text>
+  <text x="870" y="310" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 共享状态存储</text>
+  <text x="870" y="350" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">适用场景</text>
+  <text x="870" y="378" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 高吞吐任务分发</text>
+  <text x="870" y="404" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 解耦生产者/消费者</text>
+  <text x="870" y="430" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 已有企业基础设施</text>
+  <path fill="#2E7D32" fill-opacity="0.08" d="M874,460 H1196 A4,4 0 0 1 1200,464 V486 A4,4 0 0 1 1196,490 H874 A4,4 0 0 1 870,486 V464 A4,4 0 0 1 874,460 Z" />
+  <text x="1035" y="480" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#2E7D32" text-anchor="middle">代表：Kafka + REST + Redis</text>
+  
+  <path fill="#1565C0" fill-opacity="0.05" stroke="#1565C0" stroke-width="1.5" d="M208,580 H1072 A8,8 0 0 1 1080,588 V632 A8,8 0 0 1 1072,640 H208 A8,8 0 0 1 200,632 V588 A8,8 0 0 1 208,580 Z" />
+  <text x="640" y="608" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1565C0" text-anchor="middle" font-weight="bold">交互模式 = Hub-and-Spoke（中心辐射）</text>
+  <text x="640" y="630" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">避免点对点混乱，所有通信经由 Orchestrator 中转协调</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">08</text>
+</svg>

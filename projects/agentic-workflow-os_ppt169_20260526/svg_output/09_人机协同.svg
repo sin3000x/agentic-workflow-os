@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0"/>
+  <!-- Title -->
+  <text x="640" y="52" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="30" fill="#1D1D1F" text-anchor="middle" font-weight="bold">Human-in-the-Loop：不是 Fallback，是 Primary Design</text>
+  <!-- Top section: 4 trigger conditions -->
+  <text x="80" y="100" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1565C0" font-weight="bold">触发人工介入的四大条件</text>
+  <!-- Condition 1 -->
+  <rect x="80" y="120" width="270" height="80" rx="8" fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="80" y="120" width="5" height="80" rx="2" fill="#1565C0"/>
+  <text x="105" y="150" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">置信度低于阈值</text>
+  <text x="105" y="178" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">Agent 输出 confidence &lt; 0.8</text>
+  <!-- Condition 2 -->
+  <rect x="370" y="120" width="270" height="80" rx="8" fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="370" y="120" width="5" height="80" rx="2" fill="#FF6F00"/>
+  <text x="395" y="150" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">不可逆操作</text>
+  <text x="395" y="178" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">转账/删除/发布等高风险动作</text>
+  <!-- Condition 3 -->
+  <rect x="660" y="120" width="270" height="80" rx="8" fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="660" y="120" width="5" height="80" rx="2" fill="#C62828"/>
+  <text x="685" y="150" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">链条衰减</text>
+  <text x="685" y="178" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">多步推理累积误差超限</text>
+  <!-- Condition 4 -->
+  <rect x="950" y="120" width="270" height="80" rx="8" fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="950" y="120" width="5" height="80" rx="2" fill="#2E7D32"/>
+  <text x="975" y="150" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">合规硬约束</text>
+  <text x="975" y="178" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">法规/政策要求人工签字</text>
+  <!-- Divider -->
+  <line x1="80" y1="230" x2="1200" y2="230" stroke="#E5E7EB" stroke-width="1"/>
+  <!-- Bottom section: Flow diagram -->
+  <text x="80" y="270" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1565C0" font-weight="bold">人机协同执行流程</text>
+  <!-- Flow boxes -->
+  <rect x="80" y="300" width="180" height="70" rx="8" fill="#1565C0" fill-opacity="0.1" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="170" y="330" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#1565C0" text-anchor="middle" font-weight="bold">Agent 检测</text>
+  <text x="170" y="353" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280" text-anchor="middle">触发条件命中</text>
+  <!-- Arrow -->
+  <line x1="260" y1="335" x2="300" y2="335" stroke="#FF6F00" stroke-width="2"/>
+  <polygon points="300,330 310,335 300,340" fill="#FF6F00"/>
+  <rect x="310" y="300" width="180" height="70" rx="8" fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1.5"/>
+  <text x="400" y="330" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#FF6F00" text-anchor="middle" font-weight="bold">中台挂起+快照</text>
+  <text x="400" y="353" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280" text-anchor="middle">保存完整上下文</text>
+  <!-- Arrow -->
+  <line x1="490" y1="335" x2="530" y2="335" stroke="#FF6F00" stroke-width="2"/>
+  <polygon points="530,330 540,335 530,340" fill="#FF6F00"/>
+  <rect x="540" y="300" width="180" height="70" rx="8" fill="#FF6F00" fill-opacity="0.1" stroke="#FF6F00" stroke-width="1.5"/>
+  <text x="630" y="330" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#FF6F00" text-anchor="middle" font-weight="bold">推送审核</text>
+  <text x="630" y="353" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280" text-anchor="middle">通知人类审批者</text>
+  <!-- Arrow -->
+  <line x1="720" y1="335" x2="760" y2="335" stroke="#FF6F00" stroke-width="2"/>
+  <polygon points="760,330 770,335 760,340" fill="#FF6F00"/>
+  <rect x="770" y="300" width="180" height="70" rx="8" fill="#2E7D32" fill-opacity="0.1" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="860" y="330" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#2E7D32" text-anchor="middle" font-weight="bold">人类确认</text>
+  <text x="860" y="353" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280" text-anchor="middle">批准/拒绝/修改</text>
+  <!-- Arrow -->
+  <line x1="950" y1="335" x2="990" y2="335" stroke="#2E7D32" stroke-width="2"/>
+  <polygon points="990,330 1000,335 990,340" fill="#2E7D32"/>
+  <rect x="1000" y="300" width="180" height="70" rx="8" fill="#2E7D32" fill-opacity="0.1" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="1090" y="330" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#2E7D32" text-anchor="middle" font-weight="bold">恢复执行</text>
+  <text x="1090" y="353" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280" text-anchor="middle">Agent 继续工作流</text>
+  <!-- Callout box -->
+  <rect x="350" y="430" width="580" height="70" rx="10" fill="#FF6F00" fill-opacity="0.06" stroke="#FF6F00" stroke-width="2"/>
+  <text x="640" y="465" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="20" fill="#FF6F00" text-anchor="middle" font-weight="bold">80% Agent 自主 + 关键节点人工</text>
+  <text x="640" y="490" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">人类不是兜底方案，而是架构设计的核心组成部分</text>
+  <!-- Bottom benefits -->
+  <text x="80" y="550" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">设计收益：</text>
+  <text x="80" y="580" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 降低 AI 幻觉风险</text>
+  <text x="380" y="580" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 满足合规审计要求</text>
+  <text x="680" y="580" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 建立人类信任</text>
+  <text x="980" y="580" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" fill="#6B7280">• 渐进式自动化</text>
+  <!-- Page number -->
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">09</text>
+</svg>

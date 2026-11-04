@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  
+  <text x="640" y="52" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="30" fill="#1D1D1F" text-anchor="middle" font-weight="bold">关键洞察与下一步</text>
+  
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M70,85 H610 A10,10 0 0 1 620,95 V635 A10,10 0 0 1 610,645 H70 A10,10 0 0 1 60,635 V95 A10,10 0 0 1 70,85 Z" />
+  <text x="90" y="120" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#1565C0" font-weight="bold">关键洞察</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M98,145 H582 A8,8 0 0 1 590,153 V267 A8,8 0 0 1 582,275 H98 A8,8 0 0 1 90,267 V153 A8,8 0 0 1 98,145 Z" />
+  <circle cx="125" cy="180" r="20" fill="#1565C0" />
+  <text x="125" y="186" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">1</text>
+  <text x="160" y="180" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">企业最终会 Workflow 化，而非 Swarm 化</text>
+  <text x="160" y="210" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">可预测、可审计、可回滚的工作流才是企业级</text>
+  <text x="160" y="235" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">需求的核心。自由协作的 Swarm 模式在生产</text>
+  <text x="160" y="260" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">环境中不可控。</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M98,290 H582 A8,8 0 0 1 590,298 V412 A8,8 0 0 1 582,420 H98 A8,8 0 0 1 90,412 V298 A8,8 0 0 1 98,290 Z" />
+  <circle cx="125" cy="325" r="20" fill="#FF6F00" />
+  <text x="125" y="331" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">2</text>
+  <text x="160" y="325" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">生产里稳定的是 2-3 Agent，不是 100 个</text>
+  <text x="160" y="355" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">少量专精 Agent + 明确职责边界 = 可维护。</text>
+  <text x="160" y="380" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">大量自由协作 Agent = 调试噩梦。</text>
+  <text x="160" y="405" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">从小团队开始，逐步扩展。</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M98,435 H582 A8,8 0 0 1 590,443 V557 A8,8 0 0 1 582,565 H98 A8,8 0 0 1 90,557 V443 A8,8 0 0 1 98,435 Z" />
+  <circle cx="125" cy="470" r="20" fill="#2E7D32" />
+  <text x="125" y="476" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">3</text>
+  <text x="160" y="470" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">Human-in-the-Loop 是 Primary Design</text>
+  <text x="160" y="500" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">人类不是 AI 失败时的兜底方案，而是架构</text>
+  <text x="160" y="525" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">设计的核心组成部分。关键决策必须经过</text>
+  <text x="160" y="550" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">人类确认。</text>
+  
+  <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M670,85 H1210 A10,10 0 0 1 1220,95 V635 A10,10 0 0 1 1210,645 H670 A10,10 0 0 1 660,635 V95 A10,10 0 0 1 670,85 Z" />
+  <text x="690" y="120" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" fill="#FF6F00" font-weight="bold">行动建议</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M698,145 H1182 A8,8 0 0 1 1190,153 V227 A8,8 0 0 1 1182,235 H698 A8,8 0 0 1 690,227 V153 A8,8 0 0 1 698,145 Z" />
+  <path fill="#FF6F00" d="M692,145 H693 A2,2 0 0 1 695,147 V233 A2,2 0 0 1 693,235 H692 A2,2 0 0 1 690,233 V147 A2,2 0 0 1 692,145 Z" />
+  <text x="720" y="175" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">1. 先做 Workflow State Machine</text>
+  <text x="720" y="205" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">这是整个系统的骨架，优先级最高</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M698,250 H1182 A8,8 0 0 1 1190,258 V332 A8,8 0 0 1 1182,340 H698 A8,8 0 0 1 690,332 V258 A8,8 0 0 1 698,250 Z" />
+  <path fill="#FF6F00" d="M692,250 H693 A2,2 0 0 1 695,252 V338 A2,2 0 0 1 693,340 H692 A2,2 0 0 1 690,338 V252 A2,2 0 0 1 692,250 Z" />
+  <text x="720" y="280" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">2. 从小团队试点（3-5 员工 Agent）</text>
+  <text x="720" y="310" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">验证核心流程，积累运营经验</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M698,355 H1182 A8,8 0 0 1 1190,363 V437 A8,8 0 0 1 1182,445 H698 A8,8 0 0 1 690,437 V363 A8,8 0 0 1 698,355 Z" />
+  <path fill="#FF6F00" d="M692,355 H693 A2,2 0 0 1 695,357 V443 A2,2 0 0 1 693,445 H692 A2,2 0 0 1 690,443 V357 A2,2 0 0 1 692,355 Z" />
+  <text x="720" y="385" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">3. 定义清晰角色和 Escalation 规则</text>
+  <text x="720" y="415" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">每个 Agent 职责边界明确，升级路径清晰</text>
+  
+  <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M698,460 H1182 A8,8 0 0 1 1190,468 V542 A8,8 0 0 1 1182,550 H698 A8,8 0 0 1 690,542 V468 A8,8 0 0 1 698,460 Z" />
+  <path fill="#C62828" d="M692,460 H693 A2,2 0 0 1 695,462 V548 A2,2 0 0 1 693,550 H692 A2,2 0 0 1 690,548 V462 A2,2 0 0 1 692,460 Z" />
+  <text x="720" y="490" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F" font-weight="bold">4. 别一开始做"智能对话网络"</text>
+  <text x="720" y="520" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#C62828">这是最常见的过度设计陷阱</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">13</text>
+</svg>

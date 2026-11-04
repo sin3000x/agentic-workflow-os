@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  
+  <text x="640" y="80" text-anchor="middle" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="30" font-weight="700" fill="#1D1D1F">业界收敛方向：Supervisor-Worker 架构</text>
+  
+  <rect x="200" y="120" width="880" height="80" rx="8" fill="#F5F7FA" />
+  <text x="640" y="155" text-anchor="middle" font-family="Georgia, &quot;Microsoft YaHei&quot;, serif" font-size="18" fill="#1565C0" font-weight="600">"Supervisor / Orchestrator Agent</text>
+  <text x="640" y="182" text-anchor="middle" font-family="Georgia, &quot;Microsoft YaHei&quot;, serif" font-size="18" fill="#1565C0" font-weight="600">+ Human-owned Worker Agents + Workflow Runtime"</text>
+  
+  <g id="arch-simple">
+    
+    <rect x="440" y="240" width="400" height="70" rx="10" fill="#1565C0" />
+    <use data-icon="tabler-outline/robot" x="470" y="258" width="34" height="34" fill="#FFFFFF" stroke-width="2" />
+    <text x="520" y="275" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Supervisor Agent（中台）</text>
+    <text x="520" y="298" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#FFFFFF" fill-opacity="0.8">监控 · 识别 · 分解 · 指派 · 跟踪 · 升级</text>
+    
+    <line x1="540" y1="310" x2="300" y2="380" stroke="#1565C0" stroke-width="2" />
+    <line x1="640" y1="310" x2="640" y2="380" stroke="#1565C0" stroke-width="2" />
+    <line x1="740" y1="310" x2="980" y2="380" stroke="#1565C0" stroke-width="2" />
+    
+    <rect x="200" y="385" width="200" height="55" rx="8" fill="#FFFFFF" stroke="#1E88E5" stroke-width="1.5" />
+    <text x="300" y="415" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1E88E5">员工 Agent A</text>
+    <text x="300" y="433" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#6B7280">销售</text>
+    <rect x="540" y="385" width="200" height="55" rx="8" fill="#FFFFFF" stroke="#1E88E5" stroke-width="1.5" />
+    <text x="640" y="415" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1E88E5">员工 Agent B</text>
+    <text x="640" y="433" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#6B7280">客服</text>
+    <rect x="880" y="385" width="200" height="55" rx="8" fill="#FFFFFF" stroke="#1E88E5" stroke-width="1.5" />
+    <text x="980" y="415" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1E88E5">员工 Agent C</text>
+    <text x="980" y="433" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#6B7280">财务</text>
+    
+    <line x1="300" y1="440" x2="300" y2="490" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 3" />
+    <line x1="640" y1="440" x2="640" y2="490" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 3" />
+    <line x1="980" y1="440" x2="980" y2="490" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 3" />
+    
+    <text x="300" y="510" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">Human A</text>
+    <text x="640" y="510" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">Human B</text>
+    <text x="980" y="510" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">Human C</text>
+  </g>
+  
+  <text x="640" y="590" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#1D1D1F">业界共识：重点不在"每个Agent多聪明"</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Georgia, &quot;Microsoft YaHei&quot;, serif" font-size="18" font-weight="700" fill="#1565C0">而在 Orchestration（编排）</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">03</text>
+</svg>

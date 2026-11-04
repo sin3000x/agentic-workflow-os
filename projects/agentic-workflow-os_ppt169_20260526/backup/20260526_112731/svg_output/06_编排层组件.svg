@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0"/>
+  <!-- Title -->
+  <text x="640" y="52" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="30" fill="#1D1D1F" text-anchor="middle" font-weight="bold">Orchestrator 核心组件</text>
+  <!-- Center hub -->
+  <circle cx="640" cy="380" r="70" fill="#1565C0" fill-opacity="0.08" stroke="#1565C0" stroke-width="2"/>
+  <circle cx="640" cy="380" r="50" fill="#1565C0" fill-opacity="0.15" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="640" y="373" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle" font-weight="bold">Orchestrator</text>
+  <text x="640" y="393" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0" text-anchor="middle">Agent</text>
+  <!-- Outer ring (dashed) -->
+  <circle cx="640" cy="380" r="220" fill="none" stroke="#E5E7EB" stroke-width="1.5" stroke-dasharray="8,6"/>
+  <!-- Spoke A: Task Planner (top) -->
+  <line x1="640" y1="310" x2="640" y2="185" stroke="#1565C0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="640" cy="155" r="40" fill="#F5F7FA" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="640" y="148" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#1565C0" text-anchor="middle" font-weight="bold">A</text>
+  <text x="640" y="168" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#1D1D1F" text-anchor="middle">Task Planner</text>
+  <text x="640" y="210" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">任务规划</text>
+  <!-- Spoke B: Workflow State Machine (top-right) -->
+  <line x1="700" y1="330" x2="830" y2="240" stroke="#FF6F00" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="860" cy="220" r="40" fill="#F5F7FA" stroke="#FF6F00" stroke-width="1.5"/>
+  <text x="860" y="213" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#FF6F00" text-anchor="middle" font-weight="bold">B</text>
+  <text x="860" y="233" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#1D1D1F" text-anchor="middle">State Machine</text>
+  <text x="860" y="275" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">工作流状态机</text>
+  <!-- Spoke C: Agent Registry (bottom-right) -->
+  <line x1="700" y1="420" x2="830" y2="510" stroke="#1E88E5" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="860" cy="540" r="40" fill="#F5F7FA" stroke="#1E88E5" stroke-width="1.5"/>
+  <text x="860" y="533" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#1E88E5" text-anchor="middle" font-weight="bold">C</text>
+  <text x="860" y="553" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#1D1D1F" text-anchor="middle">Agent Registry</text>
+  <text x="860" y="595" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">注册中心</text>
+  <!-- Spoke D: Policy Engine (bottom-left) -->
+  <line x1="580" y1="420" x2="450" y2="510" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="420" cy="540" r="40" fill="#F5F7FA" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="420" y="533" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#2E7D32" text-anchor="middle" font-weight="bold">D</text>
+  <text x="420" y="553" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#1D1D1F" text-anchor="middle">Policy Engine</text>
+  <text x="420" y="595" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">策略层</text>
+  <!-- Spoke E: Human Escalation (top-left) -->
+  <line x1="580" y1="330" x2="450" y2="240" stroke="#C62828" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="420" cy="220" r="40" fill="#F5F7FA" stroke="#C62828" stroke-width="1.5"/>
+  <text x="420" y="213" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#C62828" text-anchor="middle" font-weight="bold">E</text>
+  <text x="420" y="233" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#1D1D1F" text-anchor="middle">Escalation</text>
+  <text x="420" y="275" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">人工升级</text>
+  <!-- Subtitle -->
+  <text x="640" y="670" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" fill="#6B7280" text-anchor="middle">Hub-and-Spoke 中心辐射模式：所有通信经由 Orchestrator 协调</text>
+  <!-- Page number -->
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">06</text>
+</svg>

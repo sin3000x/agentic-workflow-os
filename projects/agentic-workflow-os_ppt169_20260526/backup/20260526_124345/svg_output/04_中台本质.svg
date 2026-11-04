@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0"/>
+  <!-- Title -->
+  <text x="60" y="55" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="28" font-weight="700" fill="#1D1D1F">中台 Agent ≠ 大脑，= 操作系统</text>
+  <!-- Takeaway -->
+  <rect x="60" y="72" width="1160" height="40" rx="6" fill="#FF6F00" fill-opacity="0.06"/>
+  <text x="80" y="98" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#FF6F00" font-weight="600">核心洞察：真正核心的不是 LLM，LLM 只是其中一个 decision component</text>
+  <!-- Left column: What it is NOT -->
+  <g id="not-section">
+    <rect x="60" y="135" width="360" height="280" rx="10" fill="#F5F7FA"/>
+    <rect x="60" y="135" width="360" height="44" rx="10" fill="#C62828" fill-opacity="0.08"/>
+    <rect x="60" y="169" width="360" height="1" fill="#C62828" fill-opacity="0.15"/>
+    <use data-icon="tabler-outline/alert-triangle" x="80" y="145" width="24" height="24" fill="#C62828" stroke-width="2"/>
+    <text x="112" y="164" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="700" fill="#C62828">中台 Agent 不应该做什么</text>
+    <text x="80" y="205" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1D1D1F">Supervisor 自己"思考一切"会导致：</text>
+    <text x="95" y="240" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 不稳定、不可预测</text>
+    <text x="95" y="268" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 无法审计、难 debug</text>
+    <text x="95" y="296" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 权限风险</text>
+    <text x="95" y="324" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· Token 爆炸、状态失控</text>
+    <text x="95" y="360" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">· 难以恢复失败</text>
+    <text x="95" y="395" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#9CA3AF">生产里大量系统最后退回了 2-3 agent</text>
+  </g>
+  <!-- Right column: What it IS -->
+  <g id="is-section">
+    <rect x="450" y="135" width="770" height="280" rx="10" fill="#F5F7FA"/>
+    <rect x="450" y="135" width="770" height="44" rx="10" fill="#2E7D32" fill-opacity="0.06"/>
+    <rect x="450" y="169" width="770" height="1" fill="#2E7D32" fill-opacity="0.15"/>
+    <use data-icon="tabler-outline/puzzle" x="470" y="145" width="24" height="24" fill="#2E7D32" stroke-width="2"/>
+    <text x="502" y="164" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="700" fill="#2E7D32">中台 Agent = Workflow Runtime + Policy Engine</text>
+    <!-- Component list in two columns -->
+    <use data-icon="tabler-outline/checklist" x="475" y="195" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="505" y="212" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Workflow Engine</text>
+    <text x="505" y="232" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">任务编排与状态流转</text>
+    <use data-icon="tabler-outline/layers-intersect" x="475" y="250" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="505" y="267" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">State Machine</text>
+    <text x="505" y="287" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">可恢复/可追踪/可审计</text>
+    <use data-icon="tabler-outline/bolt" x="475" y="305" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="505" y="322" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Event Bus</text>
+    <text x="505" y="342" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">异步事件驱动</text>
+    <use data-icon="tabler-outline/shield-check" x="475" y="360" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="505" y="377" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Policy Layer</text>
+    <text x="505" y="397" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">权限/审批/合规</text>
+    <!-- Right sub-column -->
+    <use data-icon="tabler-outline/hierarchy" x="750" y="195" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="780" y="212" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Human Escalation</text>
+    <text x="780" y="232" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">关键节点人工确认</text>
+    <use data-icon="tabler-outline/checklist" x="750" y="250" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="780" y="267" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Audit Log</text>
+    <text x="780" y="287" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">全链路可追溯</text>
+    <use data-icon="tabler-outline/server" x="750" y="305" width="22" height="22" fill="#1565C0" stroke-width="2"/>
+    <text x="780" y="322" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#1D1D1F">Agent Registry</text>
+    <text x="780" y="342" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">异构Agent注册中心</text>
+    <use data-icon="tabler-outline/brain" x="750" y="360" width="22" height="22" fill="#FF6F00" stroke-width="2"/>
+    <text x="780" y="377" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="600" fill="#FF6F00">LLM（仅决策组件）</text>
+    <text x="780" y="397" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#6B7280">不是核心，是辅助</text>
+  </g>
+  <!-- Bottom insight -->
+  <rect x="60" y="440" width="1160" height="60" rx="8" fill="#1565C0" fill-opacity="0.04"/>
+  <text x="640" y="475" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" font-weight="600" fill="#1565C0">企业更像是在做：BPM + Event Bus + Workflow Engine + AI Decision Layer</text>
+  <text x="640" y="495" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#6B7280">而不是"聊天机器人" — 真正上线后，问题不在 prompt，而在 orchestration</text>
+  <!-- Page number -->
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">04</text>
+</svg>

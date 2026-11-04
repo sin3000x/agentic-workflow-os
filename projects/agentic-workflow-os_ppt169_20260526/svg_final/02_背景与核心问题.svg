@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  
+  <rect x="0" y="0" width="1280" height="4" fill="#1565C0" />
+  <text x="60" y="55" font-family="Georgia, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, serif" font-size="28" font-weight="700" fill="#1D1D1F">我们的构想与核心问题</text>
+  
+  <path fill="#1565C0" fill-opacity="0.06" d="M66,72 H1214 A6,6 0 0 1 1220,78 V106 A6,6 0 0 1 1214,112 H66 A6,6 0 0 1 60,106 V78 A6,6 0 0 1 66,72 Z" />
+  <text x="80" y="98" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="14" fill="#1565C0">核心构想：中台Agent通过数据分析发现任务 → 下发给员工Agent → 自主完成/升级人工 → 反馈结果闭环</text>
+  
+  <g id="arch-diagram">
+    <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M70,135 H470 A10,10 0 0 1 480,145 V655 A10,10 0 0 1 470,665 H70 A10,10 0 0 1 60,655 V145 A10,10 0 0 1 70,135 Z" />
+    
+    <path fill="#1565C0" d="M168,170 H372 A8,8 0 0 1 380,178 V222 A8,8 0 0 1 372,230 H168 A8,8 0 0 1 160,222 V178 A8,8 0 0 1 168,170 Z" />
+    
+  <g transform="translate(175.0, 185.0) scale(1.25)" fill="none" stroke="#FFFFFF" stroke-width="2">
+    <path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" />
+    <path d="M12 2v2" />
+    <path d="M9 12v9" />
+    <path d="M15 12v9" />
+    <path d="M5 16l4 -2" />
+    <path d="M15 14l4 2" />
+    <path d="M9 18h6" />
+    <path d="M10 8v.01" />
+    <path d="M14 8v.01" />
+  </g>
+    <text x="215" y="200" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">中台 Agent</text>
+    <text x="215" y="218" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#FFFFFF" fill-opacity="0.8">数据分析 / 异常监控 / 任务编排</text>
+    
+    <line x1="200" y1="230" x2="140" y2="290" stroke="#1565C0" stroke-width="1.5" />
+    <line x1="270" y1="230" x2="270" y2="290" stroke="#1565C0" stroke-width="1.5" />
+    <line x1="340" y1="230" x2="400" y2="290" stroke="#1565C0" stroke-width="1.5" />
+    
+    <path fill="#FFFFFF" stroke="#1E88E5" stroke-width="1.5" d="M96,295 H194 A6,6 0 0 1 200,301 V339 A6,6 0 0 1 194,345 H96 A6,6 0 0 1 90,339 V301 A6,6 0 0 1 96,295 Z" />
+    <text x="145" y="318" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" font-weight="600" fill="#1E88E5">销售 Agent</text>
+    <text x="145" y="334" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="10" fill="#6B7280">自主执行</text>
+    <path fill="#FFFFFF" stroke="#1E88E5" stroke-width="1.5" d="M221,295 H319 A6,6 0 0 1 325,301 V339 A6,6 0 0 1 319,345 H221 A6,6 0 0 1 215,339 V301 A6,6 0 0 1 221,295 Z" />
+    <text x="270" y="318" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" font-weight="600" fill="#1E88E5">客服 Agent</text>
+    <text x="270" y="334" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="10" fill="#6B7280">自主执行</text>
+    <path fill="#FFFFFF" stroke="#1E88E5" stroke-width="1.5" d="M346,295 H444 A6,6 0 0 1 450,301 V339 A6,6 0 0 1 444,345 H346 A6,6 0 0 1 340,339 V301 A6,6 0 0 1 346,295 Z" />
+    <text x="395" y="318" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" font-weight="600" fill="#1E88E5">财务 Agent</text>
+    <text x="395" y="334" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="10" fill="#6B7280">自主执行</text>
+    
+    <line x1="145" y1="345" x2="145" y2="390" stroke="#6B7280" stroke-width="1" stroke-dasharray="4 3" />
+    <line x1="270" y1="345" x2="270" y2="390" stroke="#6B7280" stroke-width="1" stroke-dasharray="4 3" />
+    <line x1="395" y1="345" x2="395" y2="390" stroke="#6B7280" stroke-width="1" stroke-dasharray="4 3" />
+    
+    <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M106,395 H184 A6,6 0 0 1 190,401 V429 A6,6 0 0 1 184,435 H106 A6,6 0 0 1 100,429 V401 A6,6 0 0 1 106,395 Z" />
+    
+  <g transform="translate(110.0, 403.0) scale(0.9166666666666666)" fill="none" stroke="#6B7280" stroke-width="2">
+    <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+  </g>
+    <text x="136" y="420" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#6B7280">员工A</text>
+    <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M231,395 H309 A6,6 0 0 1 315,401 V429 A6,6 0 0 1 309,435 H231 A6,6 0 0 1 225,429 V401 A6,6 0 0 1 231,395 Z" />
+    
+  <g transform="translate(235.0, 403.0) scale(0.9166666666666666)" fill="none" stroke="#6B7280" stroke-width="2">
+    <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+  </g>
+    <text x="261" y="420" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#6B7280">员工B</text>
+    <path fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" d="M356,395 H434 A6,6 0 0 1 440,401 V429 A6,6 0 0 1 434,435 H356 A6,6 0 0 1 350,429 V401 A6,6 0 0 1 356,395 Z" />
+    
+  <g transform="translate(360.0, 403.0) scale(0.9166666666666666)" fill="none" stroke="#6B7280" stroke-width="2">
+    <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+  </g>
+    <text x="386" y="420" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#6B7280">员工C</text>
+    
+    
+    <text x="270" y="375" text-anchor="middle" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="10" fill="#FF6F00">↑ 升级到人工处理/确认</text>
+    
+    
+    <path d="M 450 320 Q 490 320 490 200 Q 490 185 380 185" fill="none" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4 3" />
+    <text x="495" y="250" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="10" fill="#2E7D32">反馈结果</text>
+  </g>
+  
+  <g id="questions">
+    <text x="520" y="160" font-family="Georgia, &quot;Microsoft YaHei&quot;, serif" font-size="18" font-weight="700" fill="#1D1D1F">三个核心问题</text>
+    <line x1="520" y1="175" x2="700" y2="175" stroke="#E5E7EB" stroke-width="1" />
+    
+    <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M528,195 H1192 A8,8 0 0 1 1200,203 V287 A8,8 0 0 1 1192,295 H528 A8,8 0 0 1 520,287 V203 A8,8 0 0 1 528,195 Z" />
+    <path fill="#1565C0" d="M522,195 H522 A2,2 0 0 1 524,197 V293 A2,2 0 0 1 522,295 H522 A2,2 0 0 1 520,293 V197 A2,2 0 0 1 522,195 Z" />
+    
+  <g transform="translate(545.0, 220.0) scale(1.3333333333333333)" fill="none" stroke="#1565C0" stroke-width="2">
+    <path d="M6 9a6 6 0 1 0 12 0a6 6 0 0 0 -12 0" />
+    <path d="M12 3c1.333 .333 2 2.333 2 6s-.667 5.667 -2 6" />
+    <path d="M12 3c-1.333 .333 -2 2.333 -2 6s.667 5.667 2 6" />
+    <path d="M6 9h12" />
+    <path d="M3 20h7" />
+    <path d="M14 20h7" />
+    <path d="M10 20a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M12 15v3" />
+  </g>
+    <text x="595" y="230" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" font-weight="700" fill="#1D1D1F">架构全流程是什么样的？</text>
+    <text x="595" y="255" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">中台Agent的完整生命周期：从事件感知到结果闭环</text>
+    <text x="595" y="278" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">包含哪些核心组件和层次？</text>
+    
+    <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M528,310 H1192 A8,8 0 0 1 1200,318 V402 A8,8 0 0 1 1192,410 H528 A8,8 0 0 1 520,402 V318 A8,8 0 0 1 528,310 Z" />
+    <path fill="#FF6F00" d="M522,310 H522 A2,2 0 0 1 524,312 V408 A2,2 0 0 1 522,410 H522 A2,2 0 0 1 520,408 V312 A2,2 0 0 1 522,310 Z" />
+    
+  <g transform="translate(545.0, 335.0) scale(1.3333333333333333)" fill="none" stroke="#FF6F00" stroke-width="2">
+    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+  </g>
+    <text x="595" y="345" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" font-weight="700" fill="#1D1D1F">如何下发任务？</text>
+    <text x="595" y="370" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">任务拆解、路由决策、结构化载荷、并行/串行策略</text>
+    <text x="595" y="393" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">状态跟踪与 SLA 管理</text>
+    
+    <path fill="#F5F7FA" stroke="#E5E7EB" stroke-width="1" d="M528,425 H1192 A8,8 0 0 1 1200,433 V517 A8,8 0 0 1 1192,525 H528 A8,8 0 0 1 520,517 V433 A8,8 0 0 1 528,425 Z" />
+    <path fill="#1E88E5" d="M522,425 H522 A2,2 0 0 1 524,427 V523 A2,2 0 0 1 522,525 H522 A2,2 0 0 1 520,523 V427 A2,2 0 0 1 522,425 Z" />
+    
+  <g transform="translate(545.0, 450.0) scale(1.3333333333333333)" fill="none" stroke="#1E88E5" stroke-width="2">
+    <path d="M8 9h8" />
+    <path d="M8 13h6" />
+    <path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3" />
+  </g>
+    <text x="595" y="460" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="16" font-weight="700" fill="#1D1D1F">如何与不同Agent交互？</text>
+    <text x="595" y="485" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">异构Agent的通信协议、能力发现、上下文传递</text>
+    <text x="595" y="508" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="13" fill="#6B7280">人机协同升级与状态恢复机制</text>
+  </g>
+  
+  <text x="520" y="580" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="12" fill="#9CA3AF">研究来源：业界最佳实践 / 技术白皮书 / 架构案例分析</text>
+  
+  <text x="1220" y="700" font-family="&quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, Arial, sans-serif" font-size="11" fill="#9CA3AF">02</text>
+</svg>
